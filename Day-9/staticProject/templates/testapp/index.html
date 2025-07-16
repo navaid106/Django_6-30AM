@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working With Static</title>
+    <!-- linking css file from static folder -->
+    
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <!-- heading -->
+    <!-- image -->
+
+    <h1>This is Movie page</h1>
+    <img src="{% static 'images/movie.png' %}" alt="Not available">
+</body>
+</html>
