@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Portal</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1>Welcome To the News Portal</h1>
+
+    <img src="{% static 'images/welcome.jpg' %}" alt="">
+
+    <ul>
+        <li><a href="/movies">Movies information</a></li>
+        <li><a href="/sports">Sports information</a></li>
+        <li><a href="/politics">Politics information</a></li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    
+</head>
+<body>
+    <h1>{{heading}}</h1>
+    <p>{{sub1}}</p>
+    <p>{{sub2}}</p>
+    <p>{{sub3}}</p>
+
+
+    <!-- Movies image -->
+    {% if type == 'movie' %}
+    <img src="{% static 'images/m1.png' %}" alt="">
+    <img src="{% static 'images/m2.jpg' %}" alt="">
+    <img src="{% static 'images/m3.png' %}" alt="">
+
+    <!-- Sports images -->
+    {% elif type == 'sport' %}
+    <img src="{% static 'images/s1.png' %}" alt="">
+    <img src="{% static 'images/s2.jpeg' %}" alt="">
+    <img src="{% static 'images/s3.jpeg' %}" alt="">
+
+
+    <!-- Politics images -->
+    {% elif type == 'politic' %}
+    <img src="{% static 'images/p1.jpeg' %}" alt="">
+    <img src="{% static 'images/p2.jpeg' %}" alt="">
+    <img src="{% static 'images/p3.jpg' %}" alt="">
+
+
+    {% endif %}
+</body>
+</html>
