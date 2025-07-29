@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% if employee %}
+    <h1 style="color:green">Employee Details</h1>
+    <hr>
+        <table border="3">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Deparmnet</th>
+                <th>Email</th>
+            </tr>
+
+            
+            {% for emp in employee %}
+            <tr>
+                <td>{{emp.id}}</td>
+                <td>{{emp.name}}</td>
+                <td>{{emp.department}}</td>
+                <td>{{emp.email}}</td>
+            </tr>
+            {% endfor %}
+            
+        </table>
+    {% else %}
+    <h1 style="color:red">No Employee Record Found.</h1>
+
+    {% endif %}
+</body>
+</html>
