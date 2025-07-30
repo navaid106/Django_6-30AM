@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+    <title>Student Info</title>
+    <link rel="stylesheet" href="{% static 'css/std.css' %}">
+</head>
+
+<body>
+    <h1>Student Information</h1>
+    {% if student_list %}
+    {% for student in student_list %}
+    <h2>{{ student.name }}</h2>
+    <ul>
+        <li>Roll No: {{ student.rollno }}</li>
+        <li>DOB: {{ student.dob }}</li>
+        <li>Marks: {{ student.marks }}</li>
+        <li>Email: {{ student.email }} </li>
+
+        <li>Phone: {{ student.phonenumber }}</li>
+        <li>Address: {{ student.address }}</li>
+    </ul>
+    <hr>
+    {% endfor %}
+    {% else %}
+    <p>No student data found.</p>
+    {% endif %}
+</body>
+
+</html>
