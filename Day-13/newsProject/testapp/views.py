@@ -20,8 +20,7 @@ def home_view(request):
 def news_view(request,category):
     # API_KEY = '7bfb4e480a4f4b39930853d249c67a8d'
 
-    url = f"https://newsapi.org/v2/top-headlines?country=us&category={{category}}&apiKey=7bfb4e480a4f4b39930853d249c67a8d"
-
+    url = f"https://newsapi.org/v2/top-headlines?country=us&category={category}&apiKey=7bfb4e480a4f4b39930853d249c67a8d"
 
     response = requests.get(url)
     data = response.json()
@@ -36,7 +35,7 @@ def news_view(request,category):
 
     }
 
-    return render(request, 'testapp/news_list', context=dict)
+    return render(request, 'testapp/news_list.html', context=dict)
 
 
 

@@ -6,7 +6,44 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>{{articles}}</h1>
-    <!-- ...... -->
+    <!-- Category name with text -->
+    <h1>Top Headlines in {{ category }}</h1>
+
+    <!-- check articles are avaiable or not? -->
+
+    {% if articles %}
+    <ul>
+        <!-- Loop through the articles -->
+        {% for article in articles %}
+
+        <li>
+           <h2>{{article.title}}</h2> 
+
+           <!-- display image -->
+            <!-- check image avaiblability  -->
+            
+            {% if article.urlToImage %}
+                <!-- display image through <img> tag -->
+                 <img src="{{ article.urlToImage }}" alt="news image" width="350">
+            {% endif %}
+
+            <!-- display description -->
+            <p>{{ article.description }}</p>
+
+            <!-- Display news link to read full news -->
+            <a href="{{article.url}}" target="_blank">Read more</a>
+
+        </li>
+
+        {% endfor %}
+    </ul>
+
+    {% else %}
+
+    <p>No news found for this {{category}}</p>
+
+    <a href="/">Back to Home</a>
+
+    {% endif %}
 </body>
 </html>
