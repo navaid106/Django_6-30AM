@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>Profile Project</title>
+</head>
+
+<body>
+    {% if request.session %}
+<h1>Thanks for providing information... Please confirm it.</h1>
+
+<ul>
+    {% for key,value in request.session.items %}
+        <li> {{ key | upper }} ==> {{value | title}} </li>
+    {% endfor %}
+ 
+ 
+</ul>
+
+{% else %}
+    <h1>No information available.</h1>
+{% endif %}
+
+
+<body>
+
+
+</html>
