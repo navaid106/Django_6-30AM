@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a href="#" style="font-weight: bolder;" class="navbar-brand">NavaidExams</a>
+
+            <ul class="navbar-nav mr-auto">
+                <!-- item-1 -->
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+
+                <!-- item-2 -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Java Exam</a>
+                </li>
+
+                <!-- item-3 -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Python Exam</a>
+                </li>
+
+                <!-- item-4 -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Aptitude Exam</a>
+                </li>
+            </ul>
+
+            <!-- Signup  Login  Logout -->
+            
+            <ul class="navbar-nav ml-auto">
+                <!-- Signup -->
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Signup</a>
+                </li>
+
+                 <!-- Login -->
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Login</a>
+                </li>
+
+                 <!-- Logout -->
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Logout</a>
+                </li>
+
+            </ul>
+        </div>
+
+    </nav>
+
+    {% block body_block %}
+
+    {% endblock %}
+    
+</body>
+</html>
